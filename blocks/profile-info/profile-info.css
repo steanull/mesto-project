@@ -1,0 +1,9 @@
+.profile-info {
+  color: #FFFFFF;
+  width:100%;
+  max-width: 343px;
+  min-height: 73px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
