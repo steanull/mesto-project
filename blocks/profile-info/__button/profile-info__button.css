@@ -5,13 +5,22 @@
   border: 1px solid #FFFFFF;
   box-sizing: border-box;
   background-color: #000000;
-  margin: 5px 0 0 20px;
   padding: 0;
   align-self: center;
+  justify-self: end;
   cursor: pointer;
   transition: .5s;
 }
 
 .profile-info__button:hover {
   opacity: .6;
+}
+
+@media screen and (max-width: 767px) {
+  .profile-info__button {
+    max-width: 18px;
+    max-height: 18px;
+    min-height: 18px;
+    justify-self: center;
+  }
 }

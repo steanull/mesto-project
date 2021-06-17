@@ -1,5 +1,11 @@
 .profile-info__vector {
   width: 100%;
   max-width: 10px;
-  min-height: 10px;
+}
+
+@media screen and (max-width: 767px) {
+  .profile-info__vector {
+    max-width: 8px;
+    padding: 4px;
+  }
 }
