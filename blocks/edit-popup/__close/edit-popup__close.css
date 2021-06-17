@@ -1,0 +1,25 @@
+.edit-popup__close {
+  position: absolute;
+  max-width: 70px;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+  left: 50%;
+  top: 50%;
+  margin-left: 200px;
+  margin-top: -215px;
+  transition: .5s;
+}
+
+.edit-popup__close:hover {
+  opacity: 0.6;
+  transform: rotate(45deg);
+}
+
+@media screen and (max-width: 600px) {
+  .edit-popup__close {
+    margin-left: 98px;
+    margin-top: -212px;
+    max-width: 50px;
+  }
+}
