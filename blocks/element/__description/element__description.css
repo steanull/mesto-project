@@ -1,0 +1,7 @@
+.element__description {
+  margin: 25px 21px 31px;
+  padding: 0;
+  width: 100%;
+  max-width: 190px;
+  display: inline-block;
+}

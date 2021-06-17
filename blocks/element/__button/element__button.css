@@ -1,0 +1,21 @@
+.element__button {
+  margin: 0 0 0 5px;
+  padding: 0;
+  background-color: #FFFFFF;
+  border: 0;
+  width: 100%;
+  max-width: 22px;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.element__button:hover {
+  opacity: .5;
+}
+
+.element__button:active {
+  background-image: url("../../../images/heart-active.svg");
+  background-position: 0 0;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
