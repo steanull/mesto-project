@@ -1,12 +1,20 @@
 .element__button {
-  margin: 3px 0 0 0;
+  margin: 0;
   padding: 0;
+  background-image: url("../../../images/heart.svg");
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
   background-color: #FFFFFF;
   border: 0;
   width: 100%;
   max-width: 22px;
+  min-height: 22px;
+  justify-self: start;
+  align-self: center;
   transition: .5s;
   cursor: pointer;
+  box-sizing: border-box;
 }
 
 .element__button:hover {
@@ -15,7 +23,4 @@
 
 .element__button:active {
   background-image: url("../../../images/heart-active.svg");
-  background-position: 0 0;
-  background-size: contain;
-  background-repeat: no-repeat;
 }

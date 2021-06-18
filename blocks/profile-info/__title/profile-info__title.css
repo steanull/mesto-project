@@ -4,11 +4,21 @@
   line-height: 48px;
   margin: 0;
   padding: 0;
+  text-overflow: ellipsis;
+  max-width: 294px;
+  overflow: hidden;
+  white-space: nowrap;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
 }
 
 @media screen and (max-width: 767px) {
   .profile-info__title {
-    font-weight: 500;
+    max-width: 189px;
     font-size: 27px;
     line-height: 33px;
     text-align: center;
