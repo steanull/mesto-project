@@ -16,42 +16,42 @@
         <img src="images/jacques-yves-cousteau.jpg" alt="Жак-Ив Кусто́" class="profile__avatar">
         <div class="profile-info">
           <h1 class="profile-info__title">Жак-Ив Кусто</h1>
-          <button type="button" class="profile-info__button"></button>
+          <button aria-label="edit" type="button" class="profile-info__button"></button>
           <p class="profile-info__subtitle">Исследователь океана</p>
         </div>
-        <button type="button" class="profile__button"></button>
+        <button aria-label="add" type="button" class="profile__button"></button>
       </section>
       <section class="elements">
         <ul class="elements__list">
           <li class="element">
             <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
             <h2 class="element__title">Карачаевск</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
           <li class="element">
             <img src="images/elbrus-mountain.png" alt="Гора Эльбрус" class="element__image">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
           <li class="element">
             <img src="images/dombai.png" alt="Домбай" class="element__image">
             <h2 class="element__title">Домбай</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
           <li class="element">
             <img src="images/elbrus-mountain.png" alt="Гора Эльбрус" class="element__image">
             <h2 class="element__title">Гора Эльбрус</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
           <li class="element">
             <img src="images/dombai.png" alt="Домбай" class="element__image">
             <h2 class="element__title">Домбай</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
           <li class="element">
             <img src="images/karachaevsk.png" alt="Карачаевск" class="element__image">
             <h2 class="element__title">Карачаево-Черкесия</h2>
-            <button type="button" class="element__button"></button>
+            <button aria-label="like" type="button" class="element__button"></button>
           </li>
         </ul>
       </section>
@@ -62,16 +62,16 @@
   </div>
   <div class="popup">
     <div class="popup__container">
-      <button type="button" class="popup__close"></button>
-      <form name="form" class="edit-form">
-        <h2 class="edit-form__title">Редактировать профиль</h2>
+      <button aria-label="close" type="button" class="popup__close"></button>
+      <form name="form" class="form">
+        <h2 class="form__title">Редактировать профиль</h2>
         <label>
-          <input class="edit-form__item" type="text" name="name" value="Жак-Ив Кусто" required>
+          <input class="form__item" type="text" name="name" value="Жак-Ив Кусто" required>
         </label>
         <label>
-          <input class="edit-form__item" type="text" name="description" value="Исследователь океана" required>
+          <input class="form__item" type="text" name="description" value="Исследователь океана" required>
         </label>
-        <button class="edit-form__button" type="submit">Сохранить</button>
+        <button class="form__button" type="submit">Сохранить</button>
       </form>
     </div>
   </div>

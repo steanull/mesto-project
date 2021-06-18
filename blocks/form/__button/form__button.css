@@ -1,4 +1,4 @@
-.edit-form__button {
+.form__button {
   background: #000000;
   border-radius: 2px;
   max-width: 358px;
@@ -16,12 +16,12 @@
   cursor: pointer;
 }
 
-.edit-form__button:hover {
+.form__button:hover {
   opacity: 0.8;
 }
 
 @media screen and (max-width: 600px) {
-  .edit-form__button {
+  .form__button {
     margin: 24px 0 0;
     font-size: 14px;
     line-height: 17px;
