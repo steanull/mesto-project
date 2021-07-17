@@ -116,10 +116,19 @@ function newCard(cardData) {
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
     const cardTitle = cardElement.querySelector('.element__title');
     const cardImage = cardElement.querySelector('.element__image');
+    const cardLike = cardElement.querySelector('.element__button');
     cardTitle.textContent = cardData.name;
     cardImage.src = cardData.link;
     cardImage.alt = cardData.name;
+    cardLike.addEventListener('click', function (event) {
+        buttonLike(cardLike);
+    })
     return cardElement;
+}
+
+//Функция добавления-удаления класса _active в зависимости от состояния
+function buttonLike(element) {
+    element.classList.toggle('element__button_active');
 }
 
 //Перебор массива по порядку, добавление в DOM

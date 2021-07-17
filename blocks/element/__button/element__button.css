@@ -12,7 +12,7 @@
   min-height: 22px;
   justify-self: start;
   align-self: center;
-  transition: .5s;
+  transition: .2s;
   cursor: pointer;
   box-sizing: border-box;
 }
