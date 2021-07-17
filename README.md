@@ -1,17 +1,11 @@
 # Проект: Место
-
-### Обзор
-* Интро
-* Github-pages
-* Используемые технологии
-
-**Интро**
-
 Проект создан в рамках курса - Yandex.Practicum. 
 
-**Github-pages**
+![Mesto-Russia](images/preview.png)
 
-* [Ссылка на github-pages](https://steanull.github.io/mesto-project/)
+**Ссылка на Github-pages**
+
+* [steanull.github.io/mesto-project/](https://steanull.github.io/mesto-project/)
 
 **Используемые технологии**
 * Flexbox
