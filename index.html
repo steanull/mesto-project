@@ -33,7 +33,7 @@
   <div class="popup">
     <div class="popup__container">
       <button aria-label="close" type="button" class="popup__close"></button>
-      <form name="form" class="form">
+      <form name="form" class="form edit-form">
         <h2 class="form__title">Редактировать профиль</h2>
         <label>
           <input class="form__item edit-name" type="text" name="name" value="Жак-Ив Кусто" required>
@@ -48,13 +48,13 @@
   <div class="popup popup-card">
     <div class="popup__container">
       <button aria-label="close" type="button" class="popup__close"></button>
-      <form name="form" class="form">
+      <form name="form" class="form card-form">
         <h2 class="form__title">Новое место</h2>
         <label>
-          <input class="form__item edit-name" type="text" name="name" value="Название" required>
+          <input class="form__item card-name" type="text" name="name" value="Название" required>
         </label>
         <label>
-          <input class="form__item edit-job" type="text" name="description" value="Ссылка на картинку" required>
+          <input class="form__item card-image" type="text" name="description" value="Ссылка на картинку" required>
         </label>
         <button class="form__button" type="submit">Сохранить</button>
       </form>
@@ -67,6 +67,6 @@
         <button aria-label="like" type="button" class="element__button"></button>
       </li>
   </template>
-  <script async src="scripts/main.js"></script>
+  <script src="scripts/main.js"></script>
 </body>
 </html>
