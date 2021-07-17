@@ -4,7 +4,13 @@
   max-width: 345px;
   min-height: 73px;
   display: grid;
-  justify-content: center;
+  justify-content: left;
   grid-template-columns: minmax(min-content, max-content) 43px;
   grid-template-rows: minmax(min-content, max-content) minmax(min-content, max-content);
+}
+
+@media screen and (max-width: 767px) {
+  .profile-info {
+    justify-content: center;
+  }
 }
