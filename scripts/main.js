@@ -117,16 +117,20 @@ function newCard(cardData) {
     const cardTitle = cardElement.querySelector('.element__title');
     const cardImage = cardElement.querySelector('.element__image');
     const cardLike = cardElement.querySelector('.element__button');
+    const cardRemover = cardElement.querySelector('.element__icon');
     cardTitle.textContent = cardData.name;
     cardImage.src = cardData.link;
     cardImage.alt = cardData.name;
     cardLike.addEventListener('click', function (event) {
         buttonLike(cardLike);
     })
+    cardRemover.addEventListener('click', function (event) {
+        removeCart(cardElement);
+    })
     return cardElement;
 }
 
-//Функция добавления-удаления класса _active в зависимости от состояния
+//Функция добавления-удаления класса element__button_active кнопке лайка в зависимости от состояния
 function buttonLike(element) {
     element.classList.toggle('element__button_active');
 }
@@ -146,6 +150,11 @@ function formCardSubmitHandler(event) {
         }, elementsList)
         closePopup(popupCard);
     }
+}
+
+//Функция удаления элемента
+function removeCart(element) {
+    element.remove();
 }
 
 //Закрытие попап-формы по нажатию на кнопку "крестик"

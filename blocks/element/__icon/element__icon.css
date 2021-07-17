@@ -1,0 +1,23 @@
+.element__icon {
+    position: absolute;
+    z-index: 9999;
+    margin: 0;
+    padding: 0;
+    right: 15px;
+    top: 18px;
+    background-image: url("../../../images/trash.svg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    border: 0;
+    width: 100%;
+    max-width: 22px;
+    min-height: 22px;
+    transition: .2s;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.element__icon:hover {
+    opacity: .5;
+}
