@@ -7,6 +7,10 @@ const formElement = document.querySelector('.form');
 const nameInput = formElement.querySelector('.edit-name');
 const jobInput = formElement.querySelector('.edit-job');
 const elementsList = document.querySelector('.elements__list');
+const popupCard = document.querySelector('.popup-card');
+const addCardBtn = document.querySelector('.profile__button');
+const popupCardCloseBtn = popupCard.querySelector('.popup__close');
+
 
 const initialCards = [
     {
@@ -64,7 +68,7 @@ function addCard(cardElement, cardContainer) {
     cardContainer.prepend(card);
 }
 
-initialCards.forEach ((item) => {
+initialCards.forEach((item) => {
     addCard(item, elementsList);
 });
 
@@ -80,8 +84,16 @@ editProfileBtn.addEventListener('click', function () {
     openPopup(popup);
 });
 
-popupCloseBtn.addEventListener('click', function () {
+addCardBtn.addEventListener('click', function () {
+    openPopup(popupCard);
+});
+
+popupCloseBtn.addEventListener('click', function(event){
     closePopup(popup);
+});
+
+popupCardCloseBtn.addEventListener('click', function(event){
+    closePopup(popupCard);
 });
 
 function formSubmitHandler(evt) {
