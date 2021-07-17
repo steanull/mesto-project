@@ -23,6 +23,12 @@
 @import url(../blocks/element/__icon/element__icon.css);
 @import url(../blocks/element/__title/element__title.css);
 @import url(../blocks/elements/__list/elements__list.css);
+@import url(../blocks/popup-gallery/popup-gallery.css);
+@import url(../blocks/popup-gallery/__button/popup-gallery__button.css);
+@import url(../blocks/popup-gallery/__inner/popup-galery__inner.css);
+@import url(../blocks/popup-gallery/__image/popup-gallery__image.css);
+@import url(../blocks/popup-gallery/__title/popup-gallery__title.css);
+@import url(../blocks/popup-gallery/_opened/popup-gallery_opened.css);
 @import url(../blocks/footer/footer.css);
 @import url(../blocks/footer/__copyright/footer__copyright.css);
 @import url(../blocks/popup/popup.css);

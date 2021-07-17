@@ -13,6 +13,10 @@ const elementsList = document.querySelector('.elements__list');
 const popupCard = document.querySelector('.popup-card');
 const addCardBtn = document.querySelector('.profile__button');
 const popupCardCloseBtn = popupCard.querySelector('.popup__close');
+const popupGallery = document.querySelector('.popup-gallery');
+const popupGalleryCloseBtn = popupGallery.querySelector('.popup-gallery__button');
+const popupGalleryTitle = popupGallery.querySelector('.popup-gallery__title');
+const popupGalleryImage = popupGallery.querySelector('.popup-gallery__image');
 const initialCards = [
     {
         name: 'Архыз',
@@ -55,6 +59,16 @@ const initialCards = [
 //Функция добавления класса для открытия popup
 function openPopup(element) {
     element.classList.add('popup_opened');
+}
+
+//Функция добавления класса для открытия Gallery
+function openGallery(element) {
+    element.classList.add('popup-gallery_opened');
+}
+
+//Функция удаления класса для закрытия Gallery
+function closeGallery(element) {
+    element.classList.remove('popup-gallery_opened');
 }
 
 //Функция удаления класса для закрытия popup
@@ -110,7 +124,7 @@ function addCard(cardElement, cardContainer) {
     cardContainer.prepend(card);
 }
 
-//функция присвоения необходимых значений карточке, которая возвращает заполненную карточку
+//функция присвоения необходимых значений карточке, которая возвращает заполненную карточку + удаление карточки по иконке + открытие галереи по нажатию
 function newCard(cardData) {
     const cardTemplate = document.querySelector('#element').content;
     const cardElement = cardTemplate.querySelector('.element').cloneNode(true);
@@ -121,14 +135,39 @@ function newCard(cardData) {
     cardTitle.textContent = cardData.name;
     cardImage.src = cardData.link;
     cardImage.alt = cardData.name;
-    cardLike.addEventListener('click', function (event) {
+    cardImage.addEventListener('click', function () {
+        popupGalleryImage.src = cardData.link;
+        popupGalleryTitle.textContent = cardData.name;
+        openGallery(popupGallery);
+    })
+    cardLike.addEventListener('click', function () {
         buttonLike(cardLike);
     })
-    cardRemover.addEventListener('click', function (event) {
+    cardRemover.addEventListener('click', function () {
         removeCart(cardElement);
     })
     return cardElement;
 }
+
+//Закрытие Галереи по нажатию на кнопку "крестик"
+popupGalleryCloseBtn.addEventListener('click', function () {
+    closeGallery(popupGallery);
+});
+
+//Закрытие Галереи по нажатию на "Escape"
+window.onkeydown = function (event) {
+    if (event.keyCode === 27) {
+        closeGallery(popupGallery);
+    }
+};
+
+//Закрытие Галереи по нажатию на пустое поле
+popupGallery.addEventListener('click', (event) => {
+    if (event.target === event.currentTarget) {
+        closeGallery(popupGallery);
+    }
+})
+
 
 //Функция добавления-удаления класса element__button_active кнопке лайка в зависимости от состояния
 function buttonLike(element) {
@@ -172,7 +211,7 @@ window.onkeydown = function (event) {
 //Закрытие попап-формы по нажатию на пустое поле
 popupCard.addEventListener('click', (event) => {
     if (event.target === event.currentTarget) {
-        closePopup(popupCard)
+        closePopup(popupCard);
     }
 })
 
